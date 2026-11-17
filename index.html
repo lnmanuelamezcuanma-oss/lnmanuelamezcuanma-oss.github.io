@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DuoFit System · Entrenamiento y nutrición online para parejas</title>
-<meta name="description" content="Plan de entrenamiento y alimentación online hecho para ti o para ti y tu pareja: mismas comidas, cantidades para cada quien, con seguimiento y app.">
+<title>DuoFit System · Entrenamiento y nutrición online en pareja</title>
+<meta name="description" content="Especialistas en entrenamiento y nutrición online para parejas. También en plan individual. Seguimiento semanal, atención personalizada y acceso a la DuoFit App.">
 <meta property="og:title" content="DuoFit System · Entrena y come en pareja">
 <meta property="og:description" content="Entrenamiento y nutrición online personalizados, con seguimiento. Para parejas o individual.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@ section{padding:56px 0}.mut{color:var(--mut)}.c{text-align:center}
 .tog button{border:0;background:none;color:var(--mut);padding:10px 20px;border-radius:9px;font:600 15px Inter;cursor:pointer}.tog button.on{background:var(--ac);color:#fff}
 .price{position:relative;display:flex;flex-direction:column}.price.best{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}
 .price .tag{position:absolute;top:-11px;left:16px;background:var(--ac);color:#fff;font-size:12px;font-weight:600;padding:2px 10px;border-radius:10px}
-.price .amt{font:700 52px "Barlow Condensed";margin:8px 0 0}.price .amt small{font:500 15px Inter;color:var(--mut)}
+.price .amt{font:700 52px "Barlow Condensed";margin:8px 0 0}.price .amt small{font:500 15px Inter;color:var(--mut);display:block;margin-top:2px}
 .price ul{list-style:none;padding:0;margin:12px 0 18px;color:var(--mut);font-size:14px;flex:1}.price li{padding:3px 0}.price li:before{content:"✓ ";color:var(--ok);font-weight:700}
 .sv{color:var(--ok);font-size:14px;font-weight:600;min-height:21px}
 .inc{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:24px}.inc .card{display:flex;gap:14px}
@@ -48,6 +48,13 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
 .steps{counter-reset:s;display:grid;gap:12px;margin-top:24px}.steps li{list-style:none;background:var(--bg);border:1px solid var(--ln);border-radius:12px;padding:16px 16px 16px 60px;position:relative}
 .steps li:before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:12px;font:700 32px "Barlow Condensed";color:var(--ac)}
 .hide{display:none!important}
+.vtop{background:#000;border-bottom:1px solid var(--ln)}.vtop .video{border-radius:0;border:0;max-width:1040px;margin:0 auto}
+.cur{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:18px;font-size:14px;color:var(--mut)}
+.cur select{background:var(--pn);color:var(--ink);border:1px solid var(--ln);border-radius:8px;padding:8px 10px;font:600 14px Inter}
+.hl{background:#35c28a14;border:1px solid #35c28a55;border-radius:10px;padding:10px 12px;margin:10px 0;font-size:14px;color:#cfd5e0;line-height:1.5}.hl b{color:var(--ok)}
+.day{background:#ff5a3614;border:1px solid #ff5a3655;border-radius:10px;padding:10px 12px;margin:0 0 10px;font-size:14px;color:#cfd5e0}.day b{color:var(--ac2)}
+.badge{display:inline-block;background:#35c28a22;color:var(--ok);border:1px solid #35c28a55;border-radius:8px;padding:3px 9px;font-size:13px;font-weight:600;margin:6px 0}
+.two{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:22px}
 </style>
 </head>
 <body>
@@ -56,63 +63,74 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
 <div class="top"><div class="wrap"><div class="logo">DUO<b>FIT</b> SYSTEM</div><a class="btn wa" id="waTop" href="#" data-wa="Hola, tengo dudas sobre DuoFit System">WhatsApp</a></div></div>
 
 <main id="v-main">
+<div class="vtop"><div class="video" id="video"></div></div>
+
 <header class="hero"><div class="wrap">
-  <h1>Entrenen y coman <span style="color:var(--ac)">juntos</span>.<br>Cada quien con lo suyo.</h1>
-  <p class="lead">Plan de entrenamiento y alimentación online hecho a tu medida —o a la medida de los dos—. Mismas comidas para la pareja, cantidades distintas para cada quien, con seguimiento y una app para llevar todo.</p>
+  <h1>Entrenar y comer en pareja <span style="color:var(--ac)">funciona mejor</span>.</h1>
+  <p class="lead">Somos especialistas en acompañar a parejas. Ustedes comen lo mismo, cada quien con sus cantidades, y entrenan con una rutina para cada uno. Si vienes solo, el plan individual funciona igual de bien.</p>
   <div class="row"><a class="btn pri" href="#precios" data-ev="CTA_hero">Ver planes y precios</a><a class="btn wa" href="#" data-wa="Hola, vi DuoFit System y quiero información" data-ev="WA_hero">Hablar por WhatsApp</a></div>
-  <div class="chips"><span class="chip">100% online</span><span class="chip">Para parejas o individual</span><span class="chip">Rutina + alimentación</span><span class="chip">Seguimiento con gráficas y fotos</span></div>
+  <div class="chips"><span class="chip">100% online</span><span class="chip">Especialistas en parejas</span><span class="chip">También individual</span><span class="chip">Seguimiento semanal</span><span class="chip">Atención personalizada</span><span class="chip">Acceso a la DuoFit App</span></div>
 </div></header>
 
-<section class="alt"><div class="wrap c">
-  <h2>Mira cómo funciona</h2><p class="mut" style="margin:8px 0 22px">En pocos minutos te explico el sistema, qué incluye y cómo empezamos.</p>
-  <div class="video" id="video"></div>
+<section class="alt"><div class="wrap">
+  <h2>Por qué en pareja</h2>
+  <p class="mut" style="max-width:720px;margin:12px 0 0">Después de más de 15 años y miles de personas atendidas, lo vi una y otra vez: quienes llevan el plan en pareja se mantienen más tiempo, se motivan entre ellos y cumplen más. Entrenar juntos refuerza el compromiso y también la relación. No tiene que ser tu pareja: puede ser un amigo o un familiar.</p>
+  <div class="two">
+    <div class="card"><h3>Más constancia</h3><p>Se acompañan, se exigen y se animan. Es más difícil abandonar cuando alguien cuenta contigo.</p></div>
+    <div class="card"><h3>Una sola cocina</h3><p>Preparan las mismas comidas. Lo único que cambia es la cantidad que come cada quien.</p></div>
+    <div class="card"><h3>Cada quien a su medida</h3><p>Rutina, objetivo y calorías propios para cada persona. Compartir el plan no significa que sea igual.</p></div>
+  </div>
+  <p class="mut" style="margin-top:16px">¿Vas solo? El plan individual incluye lo mismo: rutina, alimentación, seguimiento y atención personalizada.</p>
 </div></section>
 
 <section><div class="wrap">
   <h2>Así empezamos</h2>
   <ol class="steps" style="padding:0">
-    <li><b>Eliges tu plan y pagas.</b><br><span class="mut">Plan básico (automático) o personalizado, individual o en pareja.</span></li>
-    <li><b>Creas tu cuenta en la app, pagas y llenas tu cuestionario.</b><br><span class="mut">Tus datos, lesiones, equipo que tienes, alergias, gustos y horarios de comida. Si vienen en pareja, cada quien tiene su propia cuenta.</span></li>
-    <li><b>Recibes tu plan en <span class="tm"></span>.</b><br><span class="mut">Rutina de entrenamiento y plan de alimentación con 3 opciones por comida, hechos con tus datos.</span></li>
-    <li><b>Seguimiento y ajustes.</b><br><span class="mut">Registras peso, medidas y fotos; ves tu progreso en gráficas y tu entrenador ajusta tu plan.</span></li>
+    <li><b>Eliges tu plan y creas tu cuenta en la DuoFit App.</b><br><span class="mut">Haces tu pago de forma segura en línea. En pareja, cada quien crea su propia cuenta y las vinculamos.</span></li>
+    <li><b>Plan básico: tu plan llega al instante.</b><br><span class="mut">En cuanto se confirma tu pago, la app genera tu rutina y tu menú y puedes empezar ese mismo día. No hay espera.</span></li>
+    <li><b>Plan personalizado: llenas tu cuestionario y yo armo tu plan.</b><br><span class="mut">Completas tus datos, medidas y fotos. Lo recibes en máximo <span class="tm"></span> después de tenerlo completo y empiezas el lunes que te corresponda.</span></li>
+    <li><b>Seguimiento semanal.</b><br><span class="mut">En el plan personalizado revisamos tu avance cada semana y ajustamos tu plan cuando hace falta.</span></li>
   </ol>
 </div></section>
 
 <section class="alt"><div class="wrap">
   <h2>Qué incluye</h2>
   <div class="inc">
-    <div class="card"><span class="ico">🏋️</span><div><h3>Rutina personalizada</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Según tu objetivo, nivel y días. Evita ejercicios que te lastiman y se adapta al equipo que sí tienes (gimnasio o casa).</p></div></div>
-    <div class="card"><span class="ico">🍽️</span><div><h3>Alimentación flexible</h3><p class="mut" style="margin:6px 0 0;font-size:15px">3 opciones en cada comida, con tus gustos, tus alergias y comida de tu región. Y un sistema de equivalentes para cambiar ingredientes sin perder el rumbo.</p></div></div>
-    <div class="card"><span class="ico">👫</span><div><h3>Hecho para parejas</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Preparan las mismas comidas; lo único que cambia son las cantidades de cada quien. Menos cocina, más constancia.</p></div></div>
-    <div class="card"><span class="ico">📈</span><div><h3>Tu progreso, a la vista</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Registra peso, medidas y fotos de avance. Gráficas claras para ver cómo vas.</p></div></div>
-    <div class="card"><span class="ico">📱</span><div><h3>Todo en una app</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Tu rutina con fotos de cada ejercicio y tu menú siempre en tu celular, sin PDFs perdidos.</p></div></div>
-    <div class="card"><span class="ico">💬</span><div><h3>Contacto directo</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Resuelves dudas por WhatsApp con tu entrenador.</p></div></div>
+    <div class="card"><span class="ico">🏋️</span><div><h3>Rutina para ti</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Según tu objetivo, tu nivel y los días que puedes entrenar. Evita lo que te lastima y se adapta al equipo que tienes, en gimnasio o en casa.</p></div></div>
+    <div class="card"><span class="ico">🍽️</span><div><h3>Alimentación flexible</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Menú con tus gustos y tus alergias, con comida de tu región. En el plan personalizado, 3 opciones por comida y equivalentes para cambiar ingredientes.</p></div></div>
+    <div class="card"><span class="ico">🗓️</span><div><h3>Seguimiento semanal</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Cada semana registras cómo vas y recibes ajustes. Tu plan avanza contigo, no se queda igual.</p></div></div>
+    <div class="card"><span class="ico">🤝</span><div><h3>Atención personalizada</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Tu plan lo diseña y lo ajusta un nutriólogo con cédula profesional. Resuelves tus dudas directo por WhatsApp.</p></div></div>
+    <div class="card"><span class="ico">📱</span><div><h3>Acceso a la DuoFit App</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Tu rutina con foto de cada ejercicio, tu menú, tu registro de peso, medidas y fotos de progreso, y la renovación de tu plan, todo en un solo lugar y desde tu celular.</p></div></div>
+    <div class="card"><span class="ico">🔒</span><div><h3>Tus datos son privados</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Tu información de salud y tus fotos solo las ve tu entrenador.</p></div></div>
   </div>
 </div></section>
 
 <section id="precios"><div class="wrap c">
-  <h2>Elige cómo quieres empezar</h2><p class="mut" style="margin:8px 0 0">Prueba el método con el plan básico o ve directo al plan personalizado.</p>
+  <h2>Elige cómo quieres empezar</h2><p class="mut" style="margin:8px 0 0">Empieza hoy con el plan básico o ve directo al plan personalizado.</p>
+  <div class="cur"><label for="curSel">Precios en pesos mexicanos (MXN). Ver equivalente en:</label><select id="curSel"></select><span id="curNote"></span></div>
   <div class="grid" style="text-align:left;margin-top:24px">
     <div class="card price" id="basic"></div>
     <div class="card price best" id="pers"></div>
-    <div class="card price"><h3>¿Dudas?</h3><div class="mut" style="font-size:14px">Te ayudo a elegir</div><div class="amt" style="font-size:34px">💬</div><ul><li>Cuéntame tu objetivo y tu situación</li><li>Te recomiendo el plan que más te conviene</li><li>También puedes contratar directo por aquí</li></ul><a class="btn wa" href="#" data-wa="Hola, tengo dudas para elegir mi plan en DuoFit System" data-ev="WA_precios">Escríbeme por WhatsApp</a></div>
+    <div class="card price"><h3>¿Dudas?</h3><div class="mut" style="font-size:14px">Te ayudo a elegir</div><div class="amt" style="font-size:34px">💬</div><ul><li>Cuéntame tu objetivo y tu situación</li><li>Te recomiendo el plan que más te conviene</li><li>También puedes contratar directo desde aquí</li></ul><a class="btn wa" href="#" data-wa="Hola, tengo dudas para elegir mi plan en DuoFit System" data-ev="WA_precios">Escríbeme por WhatsApp</a></div>
   </div>
-  <p class="mut" id="pnote" style="margin-top:16px;font-size:14px"></p>
+  <p class="mut" id="pnote" style="margin-top:16px;font-size:14px;max-width:760px;margin-left:auto;margin-right:auto"></p>
 </div></section>
 
 <section class="alt"><div class="wrap">
   <h2>Quién te acompaña</h2>
-  <div class="card" style="margin-top:20px"><h3 id="entr"></h3><p class="mut" id="cred" style="font-size:16px;margin-top:8px">Entrenamiento y nutrición con enfoque en resultados sostenibles, sin dietas extremas.</p></div>
+  <div class="card" style="margin-top:20px"><h3 id="entr"></h3><p class="mut" id="cred" style="font-size:16px;margin-top:8px">Nutriólogo y entrenador deportivo.</p></div>
 </div></section>
 
 <section><div class="wrap">
   <h2>Preguntas frecuentes</h2>
-  <details><summary>¿Necesito ir al gimnasio?</summary><p>No. Tu rutina se adapta a donde entrenes: gimnasio, casa sin equipo o casa con mancuernas y bandas. Y si en tu gimnasio falta alguna máquina, se ajusta.</p></details>
-  <details><summary>Tengo una lesión o una condición de salud, ¿puedo entrar?</summary><p>Sí. Lo registras en tu cuestionario y tu rutina evita los ejercicios que no te convienen. Si tienes una condición médica, consúltalo con tu médico antes de empezar cualquier programa.</p></details>
-  <details><summary>¿Cómo funciona para parejas?</summary><p>Cada uno crea su cuenta y se vinculan. Tienen las mismas comidas y cada quien ve sus cantidades. Las rutinas son personalizadas para cada uno.</p></details>
-  <details><summary>¿Tengo alergias o alimentos que no como?</summary><p>Lo indicas en tu cuestionario: tus alergias y alimentos que no quieres nunca aparecen en tu menú, y tus favoritos aparecen más seguido.</p></details>
-  <details><summary>¿Cómo pago?</summary><p>Con el botón de tu plan pagas de forma segura en línea. Si prefieres otra forma (por ejemplo transferencia), escríbeme por WhatsApp.</p></details>
-  <details><summary>¿Cuánto tarda en llegar mi plan?</summary><p>Después de pagar y llenar tu cuestionario, lo recibes en <span class="tm"></span>.</p></details>
+  <details><summary>¿Cuándo recibo mi plan?</summary><p>Plan básico: al instante. Cuando se confirma tu pago, la app genera tu plan y puedes empezar ese mismo día. Plan personalizado: lo recibes en máximo <span class="tm"></span> (de lunes a viernes) después de completar tu cuestionario, medidas y fotos, y empiezas el lunes que te corresponda.</p></details>
+  <details><summary>¿Necesito ir al gimnasio?</summary><p>No. Tu rutina se adapta a donde entrenes: gimnasio, casa sin equipo o casa con mancuernas y bandas.</p></details>
+  <details><summary>¿Tengo que ser pareja para el plan en dúo?</summary><p>No. Puede ser tu pareja, un amigo o un familiar. Cada quien tiene su cuenta, su rutina y su objetivo. Si viven juntos pueden compartir las mismas comidas con cantidades para cada uno; si no, cada quien recibe su propio menú.</p></details>
+  <details><summary>¿También sirve si voy solo?</summary><p>Sí. El plan individual incluye lo mismo que el de dúo. El dúo simplemente sale más barato por persona.</p></details>
+  <details><summary>Tengo una lesión o una condición de salud, ¿puedo entrar?</summary><p>Sí. Lo registras en tu cuestionario y tu rutina evita los ejercicios que no te convienen. Si tienes una condición médica, consúltalo con tu médico antes de empezar.</p></details>
+  <details><summary>¿Tengo alergias o alimentos que no como?</summary><p>Lo indicas en tu cuestionario y esos alimentos no aparecen en tu menú.</p></details>
+  <details><summary>¿Cómo pago? Vivo fuera de México.</summary><p>El pago es en línea, de forma segura, en pesos mexicanos. Si pagas con una tarjeta de otro país, tu banco hace la conversión a tu moneda. Arriba puedes ver un equivalente aproximado con el tipo de cambio del día.</p></details>
+  <details><summary>¿Qué pasa cuando termina mi plan?</summary><p>Puedes renovar desde la app a partir de 5 días antes de que termine, para no perder continuidad.</p></details>
 </div></section>
 
 <section class="alt"><div class="wrap c"><h2>¿Listos para empezar?</h2><p class="mut" style="margin:8px 0 20px">Elige tu plan o escríbeme si tienes dudas.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn pri" href="#precios" data-ev="CTA_final">Ver planes</a><a class="btn wa" href="#" data-wa="Hola, tengo una duda antes de contratar" data-ev="WA_final">Preguntar por WhatsApp</a></div></div></section>
@@ -133,35 +151,56 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const Q=new URLSearchParams(location.search),C=CONFIG;
-const mx=n=>'$'+Math.round(n).toLocaleString('es-MX');
 const utm=()=>['utm_source','utm_medium','utm_campaign','utm_content'].map(k=>Q.get(k)?k.replace('utm_','')+':'+Q.get(k):'').filter(Boolean).join(' ');
 function wa(msg){const m=msg+(utm()?`\n(origen: ${utm()})`:'');return`https://wa.me/${C.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(m)}`}
 function track(ev,d){try{if(window.fbq)fbq('trackCustom',ev,d||{});if(window.gtag)gtag('event',ev,d||{})}catch(e){}}
+/* moneda */
+const CURS=[['MXN','Peso mexicano (MXN)'],['USD','Dólar estadounidense (USD)'],['EUR','Euro (EUR)'],['COP','Peso colombiano (COP)'],['ARS','Peso argentino (ARS)'],['CLP','Peso chileno (CLP)'],['PEN','Sol peruano (PEN)'],['GTQ','Quetzal (GTQ)'],['CRC','Colón costarricense (CRC)'],['DOP','Peso dominicano (DOP)'],['UYU','Peso uruguayo (UYU)'],['BOB','Boliviano (BOB)'],['PYG','Guaraní (PYG)'],['HNL','Lempira (HNL)'],['CAD','Dólar canadiense (CAD)'],['GBP','Libra esterlina (GBP)']];
+let cur='MXN',rates=null,ratesDate='';
+const fm=(n,c,d)=>new Intl.NumberFormat('es-MX',{style:'currency',currency:c,maximumFractionDigits:d==null?0:d,minimumFractionDigits:d==null?0:d}).format(n);
+const mx=(n,d)=>fm(n,'MXN',d);
+function money(n,d){if(cur=='MXN'||!rates||!rates[cur])return mx(n,d);const v=n*rates[cur];return '≈ '+fm(v,cur,v<100?2:0)}
+const mxTag=n=>cur=='MXN'||!rates?'':`<small> (${mx(n)} MXN)</small>`;
+function curUI(){const sel=$('#curSel');sel.innerHTML=CURS.map(c=>`<option value="${c[0]}">${c[1]}</option>`).join('');
+ sel.onchange=()=>{cur=sel.value;if(cur!='MXN'&&!rates){loadRates()}else{upd()}};
+ try{const loc=(navigator.language||'').toUpperCase(),map={US:'USD',CO:'COP',AR:'ARS',CL:'CLP',PE:'PEN',GT:'GTQ',CR:'CRC',DO:'DOP',UY:'UYU',BO:'BOB',PY:'PYG',HN:'HNL',CA:'CAD',GB:'GBP',ES:'EUR',DE:'EUR',FR:'EUR',IT:'EUR'};const cc=loc.split('-')[1];if(cc&&map[cc]&&cc!='MX'){sel.value=map[cc];cur=map[cc];loadRates()}}catch(e){}}
+function loadRates(){$('#curNote').textContent='Consultando tipo de cambio…';
+ fetch('https://open.er-api.com/v6/latest/MXN').then(r=>r.json()).then(j=>{if(j&&j.rates){rates=j.rates;ratesDate=(j.time_last_update_utc||'').slice(5,16)}upd()}).catch(()=>{cur='MXN';$('#curSel').value='MXN';$('#curNote').textContent='No se pudo consultar el tipo de cambio. Mostrando pesos mexicanos.'})}
+const tmFill=()=>$$('.tm').forEach(x=>x.textContent=C.tiempoEntrega);
+function upd(){basicCard();persCard();const n=$('#curNote');
+ n.textContent=(cur!='MXN'&&rates)?`Tipo de cambio de referencia (${ratesDate||'hoy'}). El cobro se hace en pesos mexicanos.`:''}
+/* video */
 (function(){const v=C.video,box=$('#video');if(!v){box.innerHTML='<div class="ph">🎬 Aquí irá tu video de presentación</div>';return}
  if(/\.mp4(\?|$)/i.test(v))box.innerHTML=`<video src="${v}" controls playsinline preload="metadata"></video>`;
  else if(/vimeo\.com\/(\d+)/.test(v))box.innerHTML=`<iframe src="https://player.vimeo.com/video/${v.match(/vimeo\.com\/(\d+)/)[1]}" allowfullscreen></iframe>`;
  else{const id=(v.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)||[0,v])[1];box.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="Video de presentación" allowfullscreen loading="lazy"></iframe>`}})();
+/* planes */
 let tipo='pareja',per='mensual';
 const goLink=svc=>C.appUrl.replace(/[?#].*$/,'')+'?registro=1&plan='+svc;
 function basicCard(){const pm=C.precios.basico.mensual;
- $('#basic').innerHTML=`<h3>Plan básico</h3><div class="mut" style="font-size:14px">Para probar el método</div><div class="amt">${pm>0?mx(pm):'—'}<small> /mes</small></div><div class="sv">Cancela cuando quieras</div>
- <ul><li>Rutina armada automáticamente según tu nivel</li><li>Menú con 2 opciones por comida (sin equivalentes)</li><li>Cada mes, un plan nuevo y más retador</li><li>Puedes cambiar tu objetivo al renovar</li><li>App con progreso, medidas y fotos</li><li>Sin atención personalizada ni soporte de dudas</li><li>Subes al plan personalizado cuando quieras y se te abona lo que ya pagaste</li></ul>
+ $('#basic').innerHTML=`<h3>Plan básico</h3><div class="mut" style="font-size:14px">Para empezar hoy mismo</div><div><span class="badge">⚡ Tu plan llega al instante</span></div><div class="amt">${pm>0?money(pm):'—'}<small> /mes (4 semanas)</small></div><div class="sv">${mxTag(pm)}</div>
+ <ul><li>Después de tu pago, tu rutina y tu menú se generan al momento y empiezas ese mismo día</li><li>Rutina según tu nivel y objetivo</li><li>Menú con 2 opciones por comida</li><li>Cada mes, un plan nuevo y más retador</li><li>Acceso a la DuoFit App: progreso, medidas y fotos</li><li>Sin atención personalizada ni seguimiento semanal</li><li>Puedes subir al personalizado cuando quieras y se te abona el tiempo que ya pagaste</li></ul>
  <a class="btn pri" href="#" data-plan="basico" data-ev="Plan_basico">Quiero el plan básico</a>`}
-function persCard(){const T=C.precios[tipo],pm=T.mensual,pa=T.anual,sv=pm&&pa?Math.round((1-pa/(pm*12))*100):0,val=per=='mensual'?pm:pa;
- $('#pers').innerHTML=`<span class="tag">Atención personalizada</span><h3>Plan personalizado</h3><div class="mut" style="font-size:14px">Tu entrenador arma y ajusta todo</div>
+function persCard(){const T=C.precios[tipo],pm=T.mensual,pa=T.anual,n=tipo=='pareja'?2:1,
+ sav=pm&&pa?pm*12-pa:0,pct=pm&&pa?Math.round((1-pa/(pm*12))*100):0,val=per=='mensual'?pm:pa,
+ pd=pa?pa/365/n:0,pdm=pm?pm/28/n:0;
+ $('#pers').innerHTML=`<span class="tag">Atención personalizada</span><h3>Plan personalizado</h3><div class="mut" style="font-size:14px">Diseñado y ajustado por tu nutriólogo</div>
  <div class="tog" id="tog" style="margin:10px 0"><button data-t="pareja" class="${tipo=='pareja'?'on':''}">👫 Dúo (2 personas)</button><button data-t="individual" class="${tipo=='individual'?'on':''}">🙋 Individual</button></div>
- <div class="tog" id="tog2" style="margin:0 0 6px"><button data-p="mensual" class="${per=='mensual'?'on':''}">Mensual</button><button data-p="anual" class="${per=='anual'?'on':''}">Anual${sv?' · ahorra '+sv+'%':''}</button></div>
- <div class="amt">${val>0?mx(val):'—'}<small> /${per=='mensual'?'mes':'año'}${tipo=='pareja'?' (los dos)':''}</small></div><div class="sv">${per=='anual'&&val>0?`≈ ${mx(val/12)} al mes`:''}${tipo=='pareja'&&val>0?` · ${mx(val/2)} cada uno${(C.precios.individual[per]>val/2)?' en lugar de '+mx(C.precios.individual[per]):''}`:''}</div>
- <ul><li>Rutina personalizada${tipo=='pareja'?' para cada uno':''}</li><li>Plan elaborado por un Lic. en Nutrición</li><li>Plan de alimentación con 3 opciones por comida</li><li>Equivalentes para cambiar ingredientes</li>${tipo=='pareja'?'<li>Con un amigo, familiar o pareja: no tiene que ser pareja</li><li>Si viven juntos, mismas comidas con cantidades para cada quien; si no, cada quien su menú</li>':''}<li>Ajustes y seguimiento de tu entrenador</li><li>App con progreso, medidas y fotos · soporte por WhatsApp</li></ul>
+ <div class="tog" id="tog2" style="margin:0 0 6px"><button data-p="mensual" class="${per=='mensual'?'on':''}">Mensual</button><button data-p="anual" class="${per=='anual'?'on':''}">Anual${pct?' · ahorra '+pct+'%':''}</button></div>
+ <div class="amt">${val>0?money(val):'—'}<small> /${per=='mensual'?'mes (4 semanas)':'año (52 semanas)'}${tipo=='pareja'?' · los dos':''}</small></div><div class="sv">${mxTag(val)}${tipo=='pareja'&&val>0?` · ${money(val/2)} por persona`:''}</div>
+ ${per=='anual'&&sav>0?`<div class="hl"><b>Ahorras ${money(sav)}</b> (${pct}%) frente a pagar 12 meses.<br>Equivale a <b>${money(pa/12)} al mes</b> en lugar de ${money(pm)}: <b>${money(pm-pa/12)} menos cada mes</b>.</div>
+ <div class="day">Son solo <b>${money(pd,2)} al día${tipo=='pareja'?' por persona':''}</b>. Lo que muchos gastan al día en un café o un antojo que no les da ningún beneficio.</div>`:`${pm>0?`<div class="day">Equivale a <b>${money(pdm,2)} al día${tipo=='pareja'?' por persona':''}</b>.${sav>0?` Con el plan anual baja a ${money(pd,2)}.`:''}</div>`:''}`}
+ <ul><li>Entrega del plan en máximo <span class="tm"></span> después de completar tu cuestionario, medidas y fotos</li><li>Rutina personalizada${tipo=='pareja'?' para cada uno':''}</li><li>Plan de alimentación diseñado por un Lic. en Nutrición, 3 opciones por comida</li><li>Equivalentes para cambiar ingredientes</li><li>Seguimiento semanal y ajustes de tu entrenador</li>${tipo=='pareja'?'<li>Con tu pareja, un amigo o un familiar. Si viven juntos, mismas comidas con cantidades para cada quien</li>':''}<li>Acceso a la DuoFit App y soporte por WhatsApp</li></ul>
  <a class="btn pri" href="#" data-plan="personal" data-ev="Plan_${tipo}_${per}">Quiero el plan personalizado</a>`;
- $('#pnote').innerHTML='Pago único por el periodo elegido (4 semanas o 52 semanas). Si empiezas con el básico y subes, se te abona el tiempo que ya pagaste.<br><b>¿Cuándo empiezo?</b> Tu plan personalizado inicia siempre en lunes, para que tengas semanas completas: si contratas de lunes a miércoles, el lunes siguiente; el jueves te confirmo si alcanzamos el lunes siguiente; de viernes a domingo, el lunes de la semana posterior. Antes de empezar te explico tu plan por llamada. El plan básico empieza el mismo día de tu pago.'}
+ tmFill();$('#pnote').innerHTML='Pago único por el periodo elegido. Si empiezas con el básico y subes al personalizado, se te abona el tiempo que ya pagaste.<br><b>¿Cuándo empiezo el personalizado?</b> Siempre en lunes, para que tengas semanas completas. Si contratas de lunes a miércoles, empiezas el lunes siguiente; el jueves te confirmo si alcanzamos; de viernes a domingo, el lunes de la semana posterior. Tu acceso a la app es inmediato. El plan básico empieza el mismo día de tu pago.'}
 $('#precios').addEventListener('click',e=>{const b=e.target.closest('#tog button,#tog2 button');if(!b)return;if(b.dataset.t)tipo=b.dataset.t;if(b.dataset.p)per=b.dataset.p;persCard()});
-basicCard();persCard();
+curUI();basicCard();persCard();
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;
  if(a.dataset.ev)track(a.dataset.ev);
  if(a.dataset.wa){e.preventDefault();open(wa(a.dataset.wa),'_blank','noopener');return}
  if(a.dataset.plan){e.preventDefault();const svc=a.dataset.plan,code=svc=='basico'?'basico':'pers_'+(per=='anual'?'a':'m')+(tipo=='pareja'?'_dua':'');track('InitiateCheckout',{plan:code});location.href=goLink(code)}
  });
+/* textos */
 $$('.mk').forEach(x=>x.textContent=C.marca);$$('.tm').forEach(x=>x.textContent=C.tiempoEntrega);
 $('#entr').textContent=C.entrenador;if(C.cedula)$('#ced').textContent='Lic. en Nutrición · Cédula profesional '+C.cedula;if(C.creditos)$('#cred').textContent=C.creditos;
 $('#goApp').href=C.appUrl.replace(/[?#].*$/,'');$$('[data-wa]').forEach(a=>a.href=wa(a.dataset.wa));
