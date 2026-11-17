@@ -56,12 +56,26 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
 .day{background:#ff5a3614;border:1px solid #ff5a3655;border-radius:10px;padding:10px 12px;margin:0 0 10px;font-size:14px;color:#cfd5e0}.day b{color:var(--ac2)}
 .badge{display:inline-block;background:#35c28a22;color:var(--ok);border:1px solid #35c28a55;border-radius:8px;padding:3px 9px;font-size:13px;font-weight:600;margin:6px 0}
 .two{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:22px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;align-items:stretch}
+.hint,.dots{display:none}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin:0 10px}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;text-decoration:none;color:var(--mut);font-size:14px;font-weight:600;padding:8px 10px;border-radius:8px}.nav a:hover{color:var(--ink);background:var(--pn)}
+.top .btn{padding:8px 14px;font-size:14px}
+@media(max-width:860px){
+ section{padding:38px 0}
+ .plans{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:18px -18px 0;padding:14px 18px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.plans::-webkit-scrollbar{display:none}
+ .plans>.card{flex:0 0 84%;scroll-snap-align:center;max-width:380px}
+ .hint{display:block;font-size:13px;color:var(--mut);margin-top:6px}
+ .dots{display:flex;gap:7px;justify-content:center;margin-top:8px}.dots i{width:8px;height:8px;border-radius:50%;background:var(--ln)}.dots i.on{background:var(--ac)}
+ .inc,.two{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-left:-18px;margin-right:-18px;padding:4px 18px 10px;scrollbar-width:none}.inc::-webkit-scrollbar,.two::-webkit-scrollbar{display:none}
+ .inc>.card,.two>.card{flex:0 0 78%;scroll-snap-align:center}
+ .nav a.hm{display:none}
+}
 </style>
 </head>
 <body>
 <script src="config.js"></script>
 
-<div class="top"><div class="wrap"><div class="logo">DUO<b>FIT</b> SYSTEM</div><a class="btn wa" id="waTop" href="#" data-wa="Hola, tengo dudas sobre DuoFit System">WhatsApp</a></div></div>
+<div class="top"><div class="wrap"><div class="logo">DUO<b>FIT</b> SYSTEM</div><nav class="nav"><a href="#precios">Planes</a><a href="#como">Cómo funciona</a><a class="hm" href="#incluye">Incluye</a><a class="hm" href="#asesor">Asesor</a><a class="hm" href="#faq">Preguntas</a></nav><a class="btn wa" id="waTop" href="#" data-wa="Hola, tengo dudas sobre DuoFit System">WhatsApp</a></div></div>
 
 <main id="v-main">
 <div class="vtop"><div class="video" id="video"></div></div>
@@ -74,6 +88,21 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
   <div class="chips"><span class="chip">100% online</span><span class="chip">Especialistas en parejas</span><span class="chip">También individual</span><span class="chip">Seguimiento semanal</span><span class="chip">Atención personalizada</span><span class="chip">Acceso a la DuoFit App</span></div>
 </div></header>
 
+<section id="precios" class="alt"><div class="wrap c">
+  <h2>Elige cómo quieres empezar</h2><p class="mut" style="margin:8px 0 0">Compara los tres planes y elige el que va contigo.</p>
+  <div class="tog" id="tog2" style="margin:18px 0 6px"></div>
+  <div class="cur"><label for="curSel">Precios en MXN. Ver equivalente en:</label><select id="curSel"></select><span id="curNote"></span></div>
+  <div class="hint">Desliza → para comparar</div>
+  <div class="plans" id="plans" style="text-align:left">
+    <div class="card price" id="basic"></div>
+    <div class="card price" id="pInd"></div>
+    <div class="card price best" id="pDuo"></div>
+  </div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+  <p class="mut" id="pnote" style="margin-top:16px;font-size:14px;max-width:760px;margin-left:auto;margin-right:auto"></p>
+  <p style="margin-top:14px"><a class="btn wa" href="#" data-wa="Hola, ¿me ayudas a elegir mi plan?" data-ev="WA_planes">¿Dudas? Te ayudo a elegir por WhatsApp</a></p>
+</div></section>
+
 <section class="alt"><div class="wrap">
   <h2>Por qué en pareja</h2>
   <p class="mut" style="max-width:720px;margin:12px 0 0">En más de 15 años atendiendo a miles de personas lo vi una y otra vez: quienes llevan el plan en pareja se mantienen más tiempo, se motivan entre ellos y cumplen más. Entrenar juntos refuerza el compromiso y también la relación. No tiene que ser tu pareja: puede ser un amigo o un familiar.</p>
@@ -85,7 +114,7 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
   <p class="mut" style="margin-top:16px">¿Vas solo? El plan individual incluye lo mismo: rutina, alimentación, seguimiento y atención personalizada.</p>
 </div></section>
 
-<section><div class="wrap">
+<section id="como"><div class="wrap">
   <h2>Así empezamos</h2>
   <ol class="steps" style="padding:0">
     <li><b>Eliges tu plan y creas tu cuenta en la DuoFit App.</b><br><span class="mut">Haces tu pago de forma segura en línea. En pareja, cada quien crea su propia cuenta y las vinculamos.</span></li>
@@ -96,7 +125,7 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
   </ol>
 </div></section>
 
-<section class="alt"><div class="wrap">
+<section id="incluye" class="alt"><div class="wrap">
   <h2>Qué incluye</h2>
   <div class="inc">
     <div class="card"><span class="ico">🏋️</span><div><h3>Rutina para ti</h3><p class="mut" style="margin:6px 0 0;font-size:15px">Según tu objetivo, tu nivel y los días que puedes entrenar. Evita lo que te lastima y se adapta al equipo que tienes, en gimnasio o en casa.</p></div></div>
@@ -120,23 +149,12 @@ footer{border-top:1px solid var(--ln);padding:30px 0 90px;color:var(--mut);font-
   <div class="req"><b>Importante:</b> en todos los planes es obligatorio completar tu información y tus cuestionarios (peso, medidas, lesiones, alergias, hábitos y fotos). Si falta información, no se puede armar tu plan.</div>
 </div></section>
 
-<section id="precios" class="alt"><div class="wrap c">
-  <h2>Elige cómo quieres empezar</h2><p class="mut" style="margin:8px 0 0">Empieza hoy con el plan básico o ve directo al plan personalizado.</p>
-  <div class="cur"><label for="curSel">Precios en pesos mexicanos (MXN). Ver equivalente en:</label><select id="curSel"></select><span id="curNote"></span></div>
-  <div class="grid" style="text-align:left;margin-top:24px">
-    <div class="card price" id="basic"></div>
-    <div class="card price best" id="pers"></div>
-    <div class="card price"><h3>¿Dudas?</h3><div class="mut" style="font-size:14px">Te ayudo a elegir</div><div class="amt" style="font-size:34px">💬</div><ul><li>Cuéntame tu objetivo y tu situación</li><li>Te recomiendo el plan que más te conviene</li><li>También puedes contratar directo desde aquí</li></ul><a class="btn wa" href="#" data-wa="Hola, tengo dudas para elegir mi plan en DuoFit System" data-ev="WA_precios">Escríbeme por WhatsApp</a></div>
-  </div>
-  <p class="mut" id="pnote" style="margin-top:16px;font-size:14px;max-width:760px;margin-left:auto;margin-right:auto"></p>
-</div></section>
-
-<section class="alt"><div class="wrap">
+<section id="asesor" class="alt"><div class="wrap">
   <h2>Quién está detrás de DuoFit</h2>
   <div class="card" style="margin-top:20px"><div class="me"><img id="foto" class="hide" alt="Manuel Amezcua"><div><h3 id="entr"></h3><div class="by" style="margin:6px 0 0">Nutriólogo · Entrenador deportivo · Fundador de DuoFit</div><p class="mut" id="cred" style="font-size:16px;margin-top:10px">Nutriólogo y entrenador deportivo.</p></div></div></div>
 </div></section>
 
-<section><div class="wrap">
+<section id="faq"><div class="wrap">
   <h2>Preguntas frecuentes</h2>
   <details><summary>¿Cuándo recibo mi plan?</summary><p>Plan básico: al instante. En cuanto completas tu información, la app genera tu plan con tus datos y puedes empezar ese mismo día. Plan personalizado: lo recibes en máximo <span class="tm"></span> (de lunes a viernes) después de completar tu información, y empiezas el lunes que te corresponda.</p></details>
   <details><summary>¿Necesito ir al gimnasio?</summary><p>No. Tu rutina se adapta a donde entrenes: gimnasio, casa sin equipo o casa con mancuernas y bandas.</p></details>
@@ -192,30 +210,30 @@ function upd(){basicCard();persCard();const n=$('#curNote');
  else if(/vimeo\.com\/(\d+)/.test(v))box.innerHTML=`<iframe src="https://player.vimeo.com/video/${v.match(/vimeo\.com\/(\d+)/)[1]}" allowfullscreen></iframe>`;
  else{const id=(v.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)||[0,v])[1];box.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="Video de presentación" allowfullscreen loading="lazy"></iframe>`}})();
 /* planes */
-let tipo='pareja',per='mensual';
+let per='mensual';
 const goLink=svc=>C.appUrl.replace(/[?#].*$/,'')+'?registro=1&plan='+svc;
 function basicCard(){const pm=C.precios.basico.mensual;
  $('#basic').innerHTML=`<h3>Plan básico</h3><div class="mut" style="font-size:14px">Personalizado y automático, para empezar hoy mismo</div><div><span class="badge">⚡ Tu plan llega al instante</span></div><div class="amt">${pm>0?money(pm):'—'}<small> /mes (4 semanas)</small></div><div class="sv">${mxTag(pm)}</div><div class="sv" style="min-height:0">Sin suscripción ni cargos automáticos</div>
  <ul><li>Al completar tu información, tu rutina y tu menú se generan al momento y empiezas ese mismo día</li><li>Basado en tu objetivo, peso, edad, estatura, nivel, lesiones y alergias: automático, pero hecho para ti</li><li>Menú con 2 opciones por comida</li><li>Cada mes, un plan nuevo y más retador</li><li>Acceso a la DuoFit App: progreso, medidas y fotos</li><li>Sin atención personalizada ni seguimiento semanal</li><li>Puedes subir al personalizado cuando quieras y se te abona el tiempo que ya pagaste</li></ul>
  <a class="btn pri" href="#" data-plan="basico" data-ev="Plan_basico">Quiero el plan básico</a>`}
-function persCard(){const T=C.precios[tipo],pm=T.mensual,pa=T.anual,n=tipo=='pareja'?2:1,
+function persCard(){const pn=$('#pnote');
+ [['individual','#pInd'],['pareja','#pDuo']].forEach(([t,sel])=>{const T=C.precios[t],pm=T.mensual,pa=T.anual,n=t=='pareja'?2:1,
  sav=pm&&pa?pm*12-pa:0,pct=pm&&pa?Math.round((1-pa/(pm*12))*100):0,val=per=='mensual'?pm:pa,
- pd=pa?pa/365/n:0,pdm=pm?pm/28/n:0;
- $('#pers').innerHTML=`<span class="tag">Atención personalizada</span><h3>Plan personalizado</h3><div class="mut" style="font-size:14px">Diseñado y ajustado por Manuel Amezcua</div>
- <div class="tog" id="tog" style="margin:10px 0"><button data-t="pareja" class="${tipo=='pareja'?'on':''}">👫 Dúo (2 personas)</button><button data-t="individual" class="${tipo=='individual'?'on':''}">🙋 Individual</button></div>
- <div class="tog" id="tog2" style="margin:0 0 6px"><button data-p="mensual" class="${per=='mensual'?'on':''}">Mensual</button><button data-p="anual" class="${per=='anual'?'on':''}">Anual${pct?' · ahorra '+pct+'%':''}</button></div>
- <div class="amt">${val>0?money(val):'—'}<small> /${per=='mensual'?'mes (4 semanas)':'año (52 semanas)'}${tipo=='pareja'?' · los dos':''}</small></div><div class="sv">${mxTag(val)}${tipo=='pareja'&&val>0?` · ${money(val/2)} por persona`:''}</div>
- ${per=='anual'&&sav>0?`<div class="hl"><b>Ahorras ${money(sav)}</b> (${pct}%) frente a pagar 12 meses.<br>Equivale a <b>${money(pa/12)} al mes</b> en lugar de ${money(pm)}: <b>${money(pm-pa/12)} menos cada mes</b>.</div>
- <div class="day">Son solo <b>${money(pd,2)} al día${tipo=='pareja'?' por persona':''}</b>. Lo que muchos gastan al día en un café o un antojo que no les da ningún beneficio.</div>`:`${pm>0?`<div class="day">Equivale a <b>${money(pdm,2)} al día${tipo=='pareja'?' por persona':''}</b>.${sav>0?` Con el plan anual baja a ${money(pd,2)}.`:''}</div>`:''}`}
- <ul><li>Entrega del plan en máximo <span class="tm"></span> después de completar tu información (cuestionarios, medidas, fotos)</li><li>Rutina personalizada${tipo=='pareja'?' para cada uno':''}</li><li>Plan de alimentación diseñado por mí, 3 opciones por comida</li><li>Equivalentes para cambiar ingredientes</li><li>Seguimiento semanal y ajustes hechos por mí</li>${tipo=='pareja'?'<li>Con tu pareja, un amigo o un familiar. Si viven juntos, mismas comidas con cantidades para cada quien</li>':''}<li>Acceso a la DuoFit App y soporte por WhatsApp</li></ul>
- <a class="btn pri" href="#" data-plan="personal" data-ev="Plan_${tipo}_${per}">Quiero el plan personalizado</a>`;
- tmFill();$('#pnote').innerHTML='Pago único por el periodo elegido. Si empiezas con el básico y subes al personalizado, se te abona el tiempo que ya pagaste.<br><b>¿Cuándo empiezo el personalizado?</b> Siempre en lunes, para que tengas semanas completas. Si contratas de lunes a miércoles, empiezas el lunes siguiente; el jueves te confirmo si alcanzamos; de viernes a domingo, el lunes de la semana posterior. Tu acceso a la app es inmediato. El plan básico empieza el mismo día de tu pago.'}
-$('#precios').addEventListener('click',e=>{const b=e.target.closest('#tog button,#tog2 button');if(!b)return;if(b.dataset.t)tipo=b.dataset.t;if(b.dataset.p)per=b.dataset.p;persCard()});
+ pd=pa?pa/365/n:0,pdm=pm?pm/28/n:0,duo=t=='pareja';
+ $(sel).innerHTML=`<span class="tag">${duo?'Más conveniente · 2 personas':'Atención personalizada'}</span><h3>Personalizado ${duo?'Dúo':'Individual'}</h3><div class="mut" style="font-size:14px">${duo?'Para ti y otra persona · diseñado por Manuel Amezcua':'Solo para ti · diseñado por Manuel Amezcua'}</div>
+ <div class="amt">${val>0?money(val):'—'}<small> /${per=='mensual'?'mes (4 semanas)':'año (52 semanas)'}${duo?' · los dos':''}</small></div><div class="sv">${mxTag(val)}${duo&&val>0?` · ${money(val/2)} por persona`:''}</div>
+ ${per=='anual'&&sav>0?`<div class="hl"><b>Ahorras ${money(sav)}</b> (${pct}%) frente a pagar 12 meses.<br>Son <b>${money(pm-pa/12)} menos cada mes</b>.</div><div class="day">Solo <b>${money(pd,2)} al día${duo?' por persona':''}</b>.</div>`:`${pm>0?`<div class="day">Equivale a <b>${money(pdm,2)} al día${duo?' por persona':''}</b>.${sav>0?` Con el anual baja a ${money(pd,2)}.`:''}</div>`:''}`}
+ <ul><li>Plan entregado en máximo <span class="tm"></span> tras completar tu información</li><li>Rutina personalizada${duo?' para cada uno':''}</li><li>Alimentación diseñada por mí, 3 opciones por comida</li><li>Equivalentes para cambiar ingredientes</li><li>Seguimiento semanal y ajustes hechos por mí</li>${duo?'<li>Con tu pareja, un amigo o un familiar. Si viven juntos, mismas comidas con cantidades para cada quien</li>':''}<li>DuoFit App y soporte por WhatsApp</li></ul>
+ <a class="btn pri" href="#" data-plan="personal" data-t="${t}" data-ev="Plan_${t}_${per}">Quiero el ${duo?'plan Dúo':'plan Individual'}</a>`});
+ $('#tog2').innerHTML=`<button data-p="mensual" class="${per=='mensual'?'on':''}">Mensual</button><button data-p="anual" class="${per=='anual'?'on':''}">Anual · ahorra más</button>`;
+ tmFill();pn.innerHTML='Pago único por el periodo elegido, sin suscripción. El plan básico solo se ofrece mensual. Si empiezas con el básico y subes al personalizado, se te abona el tiempo que ya pagaste.<br><b>¿Cuándo empiezo el personalizado?</b> Siempre en lunes, para que tengas semanas completas. Si contratas de lunes a miércoles, empiezas el lunes siguiente; el jueves te confirmo si alcanzamos; de viernes a domingo, el lunes de la semana posterior. Tu acceso a la app es inmediato. El plan básico empieza el mismo día de tu pago.'}
+$('#precios').addEventListener('click',e=>{const b=e.target.closest('#tog2 button');if(!b)return;if(b.dataset.p)per=b.dataset.p;persCard()});
+(function(){const p=$('#plans'),d=$$('#dots i');p.addEventListener('scroll',()=>{const c=p.children,mid=p.scrollLeft+p.clientWidth/2;let k=0,best=1e9;[...c].forEach((x,i)=>{const dd=Math.abs(x.offsetLeft+x.offsetWidth/2-mid);if(dd<best){best=dd;k=i}});d.forEach((x,i)=>x.classList.toggle('on',i==k))},{passive:true});if(innerWidth<=860)setTimeout(()=>{const x=$('#pDuo');p.scrollLeft=0},0)})();
 curUI();basicCard();persCard();
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;
  if(a.dataset.ev)track(a.dataset.ev);
  if(a.dataset.wa){e.preventDefault();open(wa(a.dataset.wa),'_blank','noopener');return}
- if(a.dataset.plan){e.preventDefault();const svc=a.dataset.plan,code=svc=='basico'?'basico':'pers_'+(per=='anual'?'a':'m')+(tipo=='pareja'?'_dua':'');track('InitiateCheckout',{plan:code});location.href=goLink(code)}
+ if(a.dataset.plan){e.preventDefault();const svc=a.dataset.plan,code=svc=='basico'?'basico':'pers_'+(per=='anual'?'a':'m')+(a.dataset.t=='pareja'?'_dua':'');track('InitiateCheckout',{plan:code});location.href=goLink(code)}
  });
 /* textos */
 $$('.mk').forEach(x=>x.textContent=C.marca);$$('.tm').forEach(x=>x.textContent=C.tiempoEntrega);
