@@ -3,7 +3,8 @@ const CONFIG={
   entrenador:'Manuel Amezcua',
   whatsapp:'523551007215',
   video:'',
-  appUrl:'https://lnmanuelamezcuanma-oss.github.io/rutinas/',
+  foto:'',
+  appUrl:'https://app.duofitsystem.com/',
   tiempoEntrega:'72 horas hábiles',
   precios:{
     basico:{mensual:99},
